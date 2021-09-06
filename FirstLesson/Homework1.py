@@ -12,29 +12,30 @@ print("Второе задание: " + str(OstatokDelenia))
 print("Третье задание: ")
 
 def enrollmentCheck(age, name):
-    if(age > 0 and age < 75):
-        if(name == "Иван"):
-            print("Вас зовут Иван")
+    if(age > 0 and age < 75 and name != "Иван"):
         if age >= 16:
-            print("Поздравляем вы поступили в ВГУИТ")
+            return("Поздравляем вы поступили в ВГУИТ")
         else:
             print("Сначала нужно окончить школу")
-            print("Осталось учиться лет: " + str(16-age))
+            return("Осталось учиться лет: " + str(16-age))
     else:
-        print("Некорректный ввод")
-    return("Работает нормально")
+        return "Некорректный ввод"
         
 
 print(enrollmentCheck(-1, "Влад"))
+print(enrollmentCheck(16, "Саша"))
 print(enrollmentCheck(16, "Иван"))
 print(enrollmentCheck(13, "Дима"))
 
 # Четвёртое задание
 print("Четвёртое задание: ")
 
-seconds = 5000
-time = str(seconds // 3600) + ":" + str(seconds % 3600 // 60) + ":" + str(seconds % 3600 % 60)
-print(time)
+
+def time(seconds):
+    fullTime = str(seconds // 86400) + ":" + str(seconds % 86400 // 3600) + ":" + str(seconds % 3600 // 60) + ":" + str(seconds % 3600 % 60)
+    return fullTime
+print(time(5000))
+print(time(90000))
 
 # Пятое задание
 print("Пятое задание: ")
@@ -57,9 +58,10 @@ print("Седьмое задание:")
 
 def isEven(number):
     if(number % 2 == 0):
-        print("Это число чётное")
+        return("Это число чётное")
     else:
-        print("Это число нечётное")
+        return("Это число нечётное")
+   
 
 print(isEven(4))
 print(isEven(5))
