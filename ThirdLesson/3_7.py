@@ -2,19 +2,17 @@
 
 n = int(input("Введите число - "))
 
-def factorialSum(n, overallSum):
+def factorialSum(n):
     x = n
-    overallSum = overallSum
+    fact = 1
     sum = 1
     for i in range(1, x + 1):
-        sum *= i 
-    if(x != 1):
-        overallSum += sum
-        return factorialSum(x - 1, overallSum)
+        fact = fact * i
+        sum = sum + fact
+    
     else:
-        print("Ответ")
-        return overallSum
+        print("Ответ:")
+        return sum
     
     
-
-print(factorialSum(n, 1))
+print(factorialSum(n))
