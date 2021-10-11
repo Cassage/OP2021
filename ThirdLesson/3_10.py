@@ -3,13 +3,18 @@
 def fiboSumWithK():
     N = int(input("Введите количество чисел - "))
     K = int(input("Введите порядковый номер - "))
-    fiboArr = [0, 1]
-    for i in range(2, N + K):
-        fiboFirst = fiboArr[i - 1]
-        fiboSecond = fiboArr[i - 2]
-        fiboArr.append(fiboFirst + fiboSecond)
+    firstNumber = 0
+    secondNumber = 1
+    sum = 0
+    for i in range(2, N):
+        container = secondNumber
+        secondNumber = firstNumber + secondNumber
+        firstNumber = container
+        if(i >= K - 1 ):
+            print(secondNumber)
+            sum += secondNumber
     print("Ответ:")
-    print(fiboArr)
-    return sum(fiboArr[K - 1:])
+    
+    return sum
 
 print(fiboSumWithK())

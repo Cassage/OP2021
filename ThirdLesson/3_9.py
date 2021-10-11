@@ -2,13 +2,16 @@
 
 def fiboSum():
     N = int(input("Введите количество чисел - "))
-    fiboArr = [0, 1]
+    firstNumber = 0
+    secondNumber = 1
+    sum = 1
     for i in range(2, N):
-        fiboFirst = fiboArr[i - 1]
-        fiboSecond = fiboArr[i - 2]
-        fiboArr.append(fiboFirst + fiboSecond)
+        container = secondNumber
+        secondNumber = firstNumber + secondNumber
+        firstNumber = container
+        sum += secondNumber
     print("Ответ:")
-    return sum(fiboArr)
+    return sum
 
 print(fiboSum())
 
