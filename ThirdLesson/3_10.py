@@ -14,7 +14,5 @@ def fiboSumWithK():
             print(secondNumber)
             sum += secondNumber
     print("Ответ:")
-    
     return sum
-
 print(fiboSumWithK())
