@@ -8,7 +8,7 @@ def stringOperations():
     vString = exampleString[0::2]
     viString = exampleString[1::2]
     viiString = exampleString[::-1]
-    viiiString = viiString[::-2]
+    viiiString = viiString[::2]
     ixString = len(exampleString)
     print(iString)
     print(iiString)
@@ -20,6 +20,4 @@ def stringOperations():
     print(viiiString)
     print(ixString)
     print("\n")
-    return "Конец"
-
-print(stringOperations())
+stringOperations()

@@ -6,5 +6,5 @@ def splitString():
     firstPart = exampleString[0:firstPartSize]
     secondPart = exampleString[firstPartSize:]
     print("Ответ:")
-    return secondPart + firstPart
-print(splitString())
+    print(secondPart + firstPart)
+splitString()

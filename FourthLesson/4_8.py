@@ -5,5 +5,5 @@ def reverseBetween():
     firstAppearance = exampleString.find("h")
     lastAppearance = exampleString.rfind("h")
     print("Ответ:")
-    return exampleString[0:firstAppearance + 1] + exampleString[firstAppearance + 1:lastAppearance][::-1] + exampleString[lastAppearance:]
-print(reverseBetween())
+    print(exampleString[0:firstAppearance + 1] + exampleString[firstAppearance + 1:lastAppearance][::-1] + exampleString[lastAppearance:])
+reverseBetween()

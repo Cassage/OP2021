@@ -5,5 +5,5 @@ def deleteBetween():
     firstAppearance = exampleString.find("h")
     lastAppearance = exampleString.rfind("h")
     print("Ответ:")
-    return exampleString[0:firstAppearance] + exampleString[lastAppearance + 1:]
-print(deleteBetween())
+    print(exampleString[0:firstAppearance] + exampleString[lastAppearance + 1:])
+deleteBetween()
