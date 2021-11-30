@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 def squareUp():
-    i = 0
+    i = 1
     N = int(input("Введите число - "))
-    while i <= N:
+    while i * i <= N:
         print(i * i)
         i+=1
 
