@@ -71,39 +71,40 @@ def until0Average():
     txt5.delete(0, END)
 
 until0Counter3 = 0
-container = 10000000
+container1 = 10000000
 def until0Bigger():
     arg = txt6.get()
     global until0Counter3
-    global container
-    if(int(arg) > container):
+    global container1
+    if(int(arg) > container1):
         until0Counter3+=1
-    container = int(arg)
+    container1= int(arg)
     if(arg == "0"):
         resultlbl6_2.configure(text = until0Counter3)
-        container = 100000
+        container1 = 100000
         until0Counter3 = 0
     txt6.delete(0, END)
 
 until0Counter4 = 0
+container2 = 10000000
 maxStreak = 0
 def until0Streak():
     arg = txt7.get()
     global until0Counter4
-    global container
+    global container2
     global maxStreak
    
     x = int(arg)
-    if(x == container):
+    if(x == container2):
             until0Counter4 += 1
     else:
         if(maxStreak < until0Counter4):
             maxStreak = until0Counter4
         until0Counter4 = 1
-    container = x
+    container2 = x
     if(x == 0):
         resultlbl7_2.configure(text = (max(maxStreak, until0Counter4)))
-        container = 1000000
+        container2 = 1000000
     txt7.delete(0, END)
 
 
